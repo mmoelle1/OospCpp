@@ -7440,7 +7440,57 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Lecture-1">Lecture 1<a class="anchor-link" href="#Lecture-1">¶</a></h1>
+<h1 id="Object-oriented-scientific-programming-with-C++">Object-oriented scientific programming with C++<a class="anchor-link" href="#Object-oriented-scientific-programming-with-C++">¶</a></h1><h3 id="Matthias-M%C3%B6ller,-Jonas-Thies-(Numerical-Analysis,-DIAM)">Matthias Möller, Jonas Thies (Numerical Analysis, DIAM)<a class="anchor-link" href="#Matthias-M%C3%B6ller,-Jonas-Thies-(Numerical-Analysis,-DIAM)">¶</a></h3><h1 id="Lecture-1">Lecture 1<a class="anchor-link" href="#Lecture-1">¶</a></h1>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="What's-this-course-about">What's this course about<a class="anchor-link" href="#What's-this-course-about">¶</a></h2>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Object-oriented-programming">Object oriented programming<a class="anchor-link" href="#Object-oriented-programming">¶</a></h3><p>Learn the <em>design principles</em> of OOP (not restricted to C++)</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Matlab-example">Matlab example<a class="anchor-link" href="#Matlab-example">¶</a></h3><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="s">4]</span>
+<span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+<p>Here, the <code>size</code> <em>functions</em> is applied to the matrix <code>A</code> and determines its size from outside. That means the function <code>size</code> must be able to deduce the matrix size. In other words, the matrix size is publicly visible.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Python-example">Python example<a class="anchor-link" href="#Python-example">¶</a></h3><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">A</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+<p>Here, the matrix <code>A</code> provides a <em>member function</em> to determine its size from inside.</p>
 </div>
 </div>
 </div>
