@@ -9,4 +9,5 @@ dependencies:
   - pip
   - pip:
     - nbgitpuller
+    - RISE
     - jupyterlab_rise
