@@ -1,5 +1,8 @@
 #!/bin/bash
 
-# Get LibKet repository
+# Enable split cell extension
+jupyter nbextension enable splitcell/splitcell
+
+# Download Eigen
 curl -s https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2 | tar -xjf - -C $HOME/
 mv $HOME/eigen-3.4.0 $HOME/eigen
