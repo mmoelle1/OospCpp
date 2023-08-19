@@ -9,3 +9,4 @@ dependencies:
   - pip
   - pip:
     - nbgitpuller
+    - jupyter_contrib_nbextensions
