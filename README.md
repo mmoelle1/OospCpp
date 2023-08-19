@@ -4,9 +4,9 @@ This repository contains the slides of the course given at TU Delft.
 
 ## Lectures
 
-| interactive slides | static slides (for printing) |
-| :----------------: | :--------------------------: |
-| [![Lecture 1][badge-binder-lecture1]][binder-lecture1] | [![Lecture 1][badge-pages-lecture1]][pages-lecture1] |
+| notebooks | interactive slides | static slides |
+| :-------: | :----------------: | :-----------: |
+| [![Lecture 1][badge-binder-lecture1]][binder-jupyterlab-lecture1] | [![Lecture 1][badge-binder-lecture1]][binder-jupyternb-lecture1] | [![Lecture 1][badge-pages-lecture1]][pages-lecture1] |
 
 ## Convert Jupyter notebooks into slides
 
@@ -18,6 +18,9 @@ jupyter nbconvert --to slides lecture1.ipynb --post serve
 
 [badge-pages-lecture1]: https://img.shields.io/badge/static-lecture1-579ACA.svg?style=flat-square
 
-[binder-lecture1]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2023
+[binder-jupyterlab-lecture1]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2023
+
+[binder-jupyternb-lecture1]:
+https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2023
 
 [pages-lecture1]: https://mmoelle1.github.io/OospCpp/slides/lecture1.html
