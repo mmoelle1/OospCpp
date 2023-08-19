@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec jupyter nbclassic "${@:4}"
