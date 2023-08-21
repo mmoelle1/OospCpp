@@ -5,7 +5,7 @@ dependencies:
   - xeus-cling
   - xeus-python
   - matplotlib-base
-  - notebook
+  - notebook < 7.0
   - pip:
     - rise
     - nbgitpuller
