@@ -6,7 +6,7 @@ dependencies:
   - xeus-python
   - matplotlib-base
   - notebook
-  - rise
   - pip:
+    - rise
     - nbgitpuller
     - jupyter-contrib-nbextensions
