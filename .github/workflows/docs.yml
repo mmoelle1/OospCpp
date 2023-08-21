@@ -1,0 +1,40 @@
+name: docs
+
+on:
+  push
+
+jobs:
+  build_docs:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up  python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    - name: install dependencies
+      run: pip install -r ./docs/requirements.txt
+
+    - name: create slides
+      run: jupyter nbconvert --to slides --output-dir docs/source/_static "notebooks/*.ipynb"
+
+    - name: convert md to rst # md reference is not recognized with md_include
+      uses: docker://pandoc/core:latest
+      with:
+        args: --from=markdown --to=rst --output=docs/source/README.rst README.md
+
+    - name: build docs
+      run: |
+        sphinx-build -W -b html docs/source docs/build -j auto
+
+    - name: deploy docs only if it is pushed to main
+      uses: peaceiris/actions-gh-pages@v3
+      # publish every time there's a push to 2023 branch
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/2023' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/build
+        force_orphan: true
