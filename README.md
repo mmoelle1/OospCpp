@@ -50,7 +50,7 @@ https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhtt
 
 [pages-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html
 [pages-lecture2]: https://mmoelle1.github.io/OospCpp/_static/lecture2.slides.html
-[pages-lecture3]: https://mmoelle1.github.io/OospCpp/notebooks/static/lecture3.slides.html
+[pages-lecture3]: https://github.com/mmoelle1/OospCpp/blob/2023/notebooks/static/lecture3.slides.html
 [pages-lecture4]: https://mmoelle1.github.io/OospCpp/notebooks/static/lecture4.slides.html
 [pages-lecture5]: https://mmoelle1.github.io/OospCpp/_static/lecture5.slides.html
 [pages-lecture6]: https://mmoelle1.github.io/OospCpp/_static/lecture6.slides.html
