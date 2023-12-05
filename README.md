@@ -14,8 +14,8 @@ We strongly recomment using the notebooks and slides in the provided binder envi
 | 1 | [![Lecture 1][badge-binder-lecture]][binder-jupyterlab-lecture1] | [![Lecture 1][badge-binder-lecture]][binder-jupyternb-lecture1] | [![Lecture 1][badge-pages-lecture]][pages-lecture1] |
 | 2 | [![Lecture 2][badge-binder-lecture]][binder-jupyterlab-lecture2] | [![Lecture 2][badge-binder-lecture]][binder-jupyternb-lecture2] | [![Lecture 2][badge-pages-lecture]][pages-lecture2] |
 | 3 | [![Lecture 3][badge-binder-lecture]][binder-jupyterlab-lecture3] | [![Lecture 3][badge-binder-lecture]][binder-jupyternb-lecture3] | [![Lecture 3][badge-pages-lecture]][pages-lecture3] |
-<!---
 | 4 | [![Lecture 4][badge-binder-lecture]][binder-jupyterlab-lecture4] | [![Lecture 4][badge-binder-lecture]][binder-jupyternb-lecture4] | [![Lecture 4][badge-pages-lecture]][pages-lecture4] |
+<!---
 | 5 | [![Lecture 5][badge-binder-lecture]][binder-jupyterlab-lecture5] | [![Lecture 5][badge-binder-lecture]][binder-jupyternb-lecture5] | [![Lecture 5][badge-pages-lecture]][pages-lecture5] |
 | 6 | [![Lecture 6][badge-binder-lecture]][binder-jupyterlab-lecture6] | [![Lecture 6][badge-binder-lecture]][binder-jupyternb-lecture6] | [![Lecture 6][badge-pages-lecture]][pages-lecture6] |
 | 7 | [![Lecture 7][badge-binder-lecture]][binder-jupyterlab-lecture7] | [![Lecture 7][badge-binder-lecture]][binder-jupyternb-lecture7] | [![Lecture 7][badge-pages-lecture]][pages-lecture7] |
@@ -48,10 +48,10 @@ https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhtt
 [binder-jupyternb-lecture7]:
 https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture7.ipynb%26branch%3D2023
 
-[pages-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html
-[pages-lecture2]: https://mmoelle1.github.io/OospCpp/_static/lecture2.slides.html
+[pages-lecture1]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture1.slides.html
+[pages-lecture2]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture2.slides.html
 [pages-lecture3]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture3.slides.html
 [pages-lecture4]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture4.slides.html
-[pages-lecture5]: https://mmoelle1.github.io/OospCpp/_static/lecture5.slides.html
-[pages-lecture6]: https://mmoelle1.github.io/OospCpp/_static/lecture6.slides.html
-[pages-lecture7]: https://mmoelle1.github.io/OospCpp/_static/lecture7.slides.html
+[pages-lecture5]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture5.slides.html
+[pages-lecture6]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture6.slides.html
+[pages-lecture7]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture7.slides.html
