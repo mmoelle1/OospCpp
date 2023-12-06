@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -11,8 +10,6 @@
 <title>lecture4 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
-<!-- <link rel="stylesheet" href="css/theme/mytheme.css" id="theme"> -->
-
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -15204,39 +15201,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=2f3c3e9b-8ea1-4d44-97f9-8019a125d916" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Overview"><center>Overview</center><a class="anchor-link" href="#Overview">&#182;</a></h2><center><img src="./plots/lecture4_cat.png" style="width:60%"></center>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=8e82d027" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Instantiate-class-with-concrete-types-(double,-float,-etc.)"><center>Instantiate class with concrete types (double, float, etc.)</center><a class="anchor-link" href="#Instantiate-class-with-concrete-types-(double,-float,-etc.)">&#182;</a></h2><p>C++ allows you to <strong>partially specialize</strong> class templates</p>
-<div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">S</span><span class="o">&gt;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span>
-<span class="n">dot</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">              </span><span class="n">d</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">conj</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<p>Note that this code will not compile. We will see why and learn remedies. Welcome to where template magic begins!</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
 <div id="cell-id=9c8204d4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15264,17 +15228,16 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Template-specialization"><center>Template specialization</center><a class="anchor-link" href="#Template-specialization">&#182;</a></h2><p>Type-independent <strong>default implementation</strong>
 This implementation is used whenever there is no (partial) specialization of the <code>struct Demo</code> and/or its functions</p>
-<p>NOTE: unable to use template, go here for visualization: <a href="https://www.online-ide.com/GWnUgMLJ3N">https://www.online-ide.com/GWnUgMLJ3N</a></p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=7e180423" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=7e180423" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
@@ -15290,11 +15253,8 @@ This implementation is used whenever there is no (partial) specialization of the
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// You can call these without creating an instance of Demo</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Generic info</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Generic test</span>
-<span class="p">}</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w">               </span><span class="c1">// Outputs: Generic info</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Generic test</span>
 </pre></div>
 
      </div>
@@ -15302,7 +15262,19 @@ This implementation is used whenever there is no (partial) specialization of the
 </div>
 </div>
 
-</div></div></section><section >
+</div>
+<div id="cell-id=5399e025-7451-42bb-bdfa-8481218425bf" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Go here for visualization: <a href="https://www.online-ide.com/GWnUgMLJ3N">https://www.online-ide.com/GWnUgMLJ3N</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
 <div id="cell-id=c300db4a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15324,9 +15296,20 @@ This implementation is used whenever there is no (partial) specialization of the
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-template-specialization"><center>Class template specialization</center><a class="anchor-link" href="#Class-template-specialization">&#182;</a></h2><p><strong>Fully specialized</strong> implementation of the entire <strong>structure</strong></p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="k">template</span><span class="o">&lt;&gt;</span>
+<p><strong>Fully specialized</strong> implementation of the entire <strong>structure</strong></p>
+
+</div>
+</div>
+</div>
+</div><div id="cell-id=901443ec-9210-416c-934e-1d0d2e885be2" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-c++"><pre><span></span><span class="k">template</span><span class="o">&lt;&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Fully specialized info&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -15335,17 +15318,16 @@ This implementation is used whenever there is no (partial) specialization of the
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Fully specialized test&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Calls the specialized version</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// class specialization </span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// class specialization</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Fully specialized info</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Fully specialized test</span>
 </pre></div>
 
+     </div>
 </div>
 </div>
 </div>
+
 </div></section><section >
 <div id="cell-id=aab2b26c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15353,25 +15335,22 @@ This implementation is used whenever there is no (partial) specialization of the
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-template-specialization"><center>Class template specialization</center><a class="anchor-link" href="#Class-template-specialization">&#182;</a></h2><p><strong>Fully specialized</strong> implementation of the entire <strong>structure</strong>
+<p><strong>Fully specialized</strong> implementation of the entire <strong>structure</strong>
 but without a member function test()</p>
 <p>Note: run here <a href="https://www.online-ide.com/1xpEOkqRAr">https://www.online-ide.com/1xpEOkqRAr</a></p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=bccf3d70" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=bccf3d70" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="c1">// Primary template</span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
+<div class=" highlight hl-c++"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Generic info&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -15393,11 +15372,8 @@ but without a member function test()</p>
 <span class="w">    </span><span class="c1">// }</span>
 <span class="p">};</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Calls the specialized info</span>
-<span class="w">    </span><span class="c1">//Demo&lt;float, long&gt;::test(); // Calls the specialized test (if defined)</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Calls the specialized info</span>
+<span class="c1">//Demo&lt;float, long&gt;::test(); // Calls the specialized test (if defined)</span>
 </pre></div>
 
      </div>
@@ -15405,7 +15381,7 @@ but without a member function test()</p>
 </div>
 </div>
 
-</div></div></section></section><section ><section >
+</div></section></section><section ><section >
 <div id="cell-id=6cb3b556" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15426,36 +15402,15 @@ but without a member function test()</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-function-template-specialization"><center>Class-function template specialization</center><a class="anchor-link" href="#Class-function-template-specialization">&#182;</a></h2><p><strong>Fully specialized</strong> implementation of <strong>function</strong> <code>info()</code></p>
+<p><strong>Fully specialized</strong> implementation of <strong>function</strong> <code>info()</code></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Fully specialised info&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 <p>This implementation provides the specialization of function
 <code>info()</code> and the generic implementation of function <code>test()</code></p>
-<div class="highlight"><pre><span></span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// class-function specialization</span>
-<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// generic</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=7f320757" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-function-template-specialization"><center>Class-function template specialization</center><a class="anchor-link" href="#Class-function-template-specialization">&#182;</a></h2><p><strong>Fully specialized</strong> implementation of function <code>info()</code></p>
-<div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;&gt;</span>
-<span class="kt">void</span><span class="w"> </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Fully specialised info&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</pre></div>
-<p>This implementation provides the specialization of function
-<code>info()</code> and the generic implementation of function <code>test()</code></p>
-<div class="highlight"><pre><span></span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// class-function specialization</span>
-<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// generic</span>
+<div class="highlight"><pre><span></span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Calls the class-function specialization</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w"> </span><span class="c1">// Calls the generic implementation</span>
 </pre></div>
 
 </div>
@@ -15480,13 +15435,13 @@ but without a member function test()</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-template-partial-specialization"><center>Class template partial specialization</center><a class="anchor-link" href="#Class-template-partial-specialization">&#182;</a></h2><p><strong>Partially specialized</strong> implementation of the <strong>structure</strong></p>
+<p><strong>Partially specialized</strong> implementation of the <strong>structure</strong></p>
 <p>Note: click here <a href="https://www.online-ide.com/bpLsXnCKG8">https://www.online-ide.com/bpLsXnCKG8</a></p>
 
 </div>
 </div>
 </div>
-</div></section><section ><div id="cell-id=db707020" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=db707020" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15494,9 +15449,7 @@ but without a member function test()</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="c1">// Original template declaration</span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
+<div class=" highlight hl-c++"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Generic info&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -15517,13 +15470,9 @@ but without a member function test()</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//This implementation is used for the special case</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Partially specialized info</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w">  </span><span class="c1">// Outputs: Partially specialized test</span>
-<span class="w">    </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w">   </span><span class="c1">// Outputs: Generic info</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Partially specialized info</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">test</span><span class="p">();</span><span class="w">  </span><span class="c1">// Outputs: Partially specialized test</span>
+<span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">();</span><span class="w">   </span><span class="c1">// Outputs: Generic info</span>
 </pre></div>
 
      </div>
@@ -15531,14 +15480,14 @@ but without a member function test()</p>
 </div>
 </div>
 
-</div></section><section >
+</div></section></section><section ><section >
 <div id="cell-id=be640e26" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Class-template-partial-specialization"><center>Class template partial specialization</center><a class="anchor-link" href="#Class-template-partial-specialization">&#182;</a></h2><p><strong>Task:</strong> implement a specialization of member function <code>info()</code> for <code>T=float</code> and arbitrary template parameter value <code>I</code></p>
+<h2 id="Class-function-template-partial-specialization"><center>Class-function template partial specialization</center><a class="anchor-link" href="#Class-function-template-partial-specialization">&#182;</a></h2><p><strong>Task:</strong> implement a specialization of member function <code>info()</code> for <code>T=float</code> and arbitrary template parameter value <code>I</code></p>
 <p>Partial function template specialization is not <strong>possible in C++</strong></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="n">Demo</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">&gt;::</span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{...}</span>
@@ -15558,7 +15507,7 @@ but without a member function test()</p>
 <h2 id="Summary-template-specialization"><center>Summary template specialization</center><a class="anchor-link" href="#Summary-template-specialization">&#182;</a></h2><p>Given a templated class with member functions</p>
 <ul>
 <li>Entire class can be fully or partially specialized</li>
-<li>Individual member functions can fully specialized</li>
+<li>Individual member functions can be fully specialized</li>
 <li>Individual member functions <strong>cannot</strong> be partially specialized</li>
 </ul>
 <p>Full/partial class specialization is like implementing a new individual class that can be accessed by the same name</p>
@@ -15619,7 +15568,7 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-paradigm"><center>SFINAE paradigm</center><a class="anchor-link" href="#SFINAE-paradigm">&#182;</a></h2><p>C++11 standard states:</p>
+<p>C++11 standard states:</p>
 <p><i>If a substitution results in an invalid type or expression, type deduction fails. An invalid type or expression is one that would be ill-formed if written using the substituted arguments. Only invalid types and expressions in the immediate context of the function type and its template parameter types can result in a deduction failure.</i></p>
 <p><strong>SFINAE:</strong> <span style=color:red;>S</span>ubstitution <span style=color:red;>F</span>ailure <span style=color:red;>I</span>s <span style=color:red;>N</span>ot <span style=color:red;>A</span>n <span style=color:red;>E</span>rror</p>
 
@@ -15633,7 +15582,7 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-paradigm"><center>SFINAE paradigm</center><a class="anchor-link" href="#SFINAE-paradigm">&#182;</a></h2><p>C++11 standard rephrased for our purpose:</p>
+<p>C++11 standard rephrased for our purpose:</p>
 <p><i>If a template substitution leads to invalid code then the compiler must not throw an error but look for another candidate (i.e. the second templated implementation of our function); <b>an error is just thrown if no other candidate can be found</b> so that the function call remains unresolved</i></p>
 
 </div>
@@ -15646,7 +15595,7 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-paradigm"><center>SFINAE paradigm</center><a class="anchor-link" href="#SFINAE-paradigm">&#182;</a></h2><p><strong>SFINAE:</strong> <span style=color:red;>S</span>ubstitution <span style=color:red;>F</span>ailure <span style=color:red;>I</span>s <span style=color:red;>N</span>ot <span style=color:red;>A</span>n <span style=color:red;>E</span>rror</p>
+<p><strong>SFINAE:</strong> <span style=color:red;>S</span>ubstitution <span style=color:red;>F</span>ailure <span style=color:red;>I</span>s <span style=color:red;>N</span>ot <span style=color:red;>A</span>n <span style=color:red;>E</span>rror</p>
 <ul>
 <li>Write multiple implementations of the same function with<ul>
 <li>the <strong>same name</strong> and</li>
@@ -15666,15 +15615,12 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>Consider the <code>is_double</code> <strong>function</strong></p>
-<p>This function returns true/false depending on the type of the parameter passed via explicit template specialisation</p>
-<p>We look for an even more elegant solution without the need to call a function and pass a parameter at all</p>
-<p>Note: Interpreter is unable to handle template, go to this page <a href="https://www.online-ide.com/wkmgjVG8yH">https://www.online-ide.com/wkmgjVG8yH</a></p>
+<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>Consider the <code>is_double</code> <strong>function</strong> which returns <code>true</code>/<code>false</code> depending on the type of the parameter passed via explicit template specialization</p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=a115b21c" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=a115b21c" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15684,17 +15630,18 @@ input parameter lists, e.g.,</p>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+
 <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
 <span class="k">template</span><span class="o">&lt;&gt;</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"> </span><span class="c1">// Print &#39;true&#39; or &#39;false&#39; for bool values</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_int(42): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">           </span><span class="c1">// Prints &#39;true&#39;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_int(42.0): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="mf">42.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">       </span><span class="c1">// Prints &#39;true&#39;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_int(&#39;A&#39;): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// Prints &#39;false&#39;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"> </span><span class="c1">// Print &#39;true&#39; or &#39;false&#39; for bool values</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double(42): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">           </span><span class="c1">// Prints &#39;true&#39;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double(42.0): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="mf">42.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">       </span><span class="c1">// Prints &#39;true&#39;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double(&#39;A&#39;): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// Prints &#39;false&#39;</span>
 </pre></div>
 
      </div>
@@ -15702,20 +15649,31 @@ input parameter lists, e.g.,</p>
 </div>
 </div>
 
-</div></div></section><section >
+</div>
+<div id="cell-id=8bb168e2-ff9a-46cb-8a9e-9259eff58749" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>NOTE: Go to this link to run <a href="https://www.online-ide.com/LupD80cIPF">https://www.online-ide.com/LupD80cIPF</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
 <div id="cell-id=709a9bef" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>Consider the templated <code>is_double</code> <strong>structure</strong> with specialization</p>
-<p>NOTE: Go to this link to run <a href="https://www.online-ide.com/0RIfmNvHFK">https://www.online-ide.com/0RIfmNvHFK</a></p>
+<p>Consider the templated <code>is_double</code> <strong>structure</strong> with specialization</p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=f9e81705" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=f9e81705" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15724,6 +15682,7 @@ input parameter lists, e.g.,</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
 <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">is_double</span>
 <span class="p">{</span>
@@ -15735,12 +15694,9 @@ input parameter lists, e.g.,</p>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"> </span><span class="c1">// Print &#39;true&#39; or &#39;false&#39; for bool values</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double&lt;int&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// Prints &#39;false&#39;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double&lt;double&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Prints &#39;true&#39;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double&lt;int&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// Prints &#39;false&#39;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_double&lt;double&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Prints &#39;true&#39;</span>
 </pre></div>
 
      </div>
@@ -15748,14 +15704,26 @@ input parameter lists, e.g.,</p>
 </div>
 </div>
 
-</div></div></section><section >
+</div>
+<div id="cell-id=63fc9020-0bea-41e2-a065-6aa20c973f26" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>NOTE: Go to this link to run <a href="https://www.online-ide.com/0RIfmNvHFK">https://www.online-ide.com/0RIfmNvHFK</a></p>
+
+</div>
+</div>
+</div>
+</div></section><section >
 <div id="cell-id=3577d66d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>Detect if a given type is <code>double</code> without passing a parameter</p>
+<p>Detect if a given type is <code>double</code> without passing a parameter</p>
 <div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_double</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
@@ -15780,7 +15748,7 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>The <code>is_double</code> <strong>type trait</strong> is evaluated at compile time in contrast to the <code>is_double()</code> <strong>function</strong> which (theoretically) might trigger an extra function call at run time (slow!)</p>
+<p>The <code>is_double</code> <strong>type trait</strong> is evaluated at compile time in contrast to the <code>is_double()</code> <strong>function</strong> which (theoretically) might trigger an extra function call at run time (slow!)</p>
 <p>A smart compiler will eliminate the if-else clause</p>
 <div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
@@ -15801,7 +15769,7 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Traits"><center>Intermezzo: Traits</center><a class="anchor-link" href="#Intermezzo:-Traits">&#182;</a></h2><p>C++ brings many <strong>type traits</strong> via <code>#include &lt;type_traits&gt;</code></p>
+<p>C++ brings many <strong>type traits</strong> via <code>#include &lt;type_traits&gt;</code></p>
 <table border="1">
   <tr>
     <th>Function</th>
@@ -15844,15 +15812,12 @@ input parameter lists, e.g.,</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:--Type-traits"><center>Intermezzo:  Type traits</center><a class="anchor-link" href="#Intermezzo:--Type-traits">&#182;</a></h2><p>The aforementioned C++ <strong>standard type traits</strong> provide</p>
+<p>The aforementioned C++ <strong>standard type traits</strong> provide</p>
 <ul>
-<li><p>Member constants:
-  <code>value (=true/false)</code></p>
-</li>
-<li><p>Member types:
-  <code>value_type (=bool)</code></p>
-<p><code>type (=true_type/false_type)</code></p>
-</li>
+<li>Member constants:
+  <code>value (=true/false)</code></li>
+<li>Member types:
+  <code>value_type (=bool)</code> and <code>type (=true_type/false_type)</code></li>
 </ul>
 <p>Member constants/types can be directly accessed</p>
 <div class="highlight"><pre><span></span><span class="n">is_fundamental</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// true</span>
@@ -15874,7 +15839,7 @@ input parameter lists, e.g.,</p>
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=ad1c76b2" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div id="cell-id=ad1c76b2" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15894,7 +15859,6 @@ input parameter lists, e.g.,</p>
 <span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">add_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">F</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">add_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">G</span><span class="p">;</span>
 
-<span class="c1">//int main(){</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type A: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">A</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: const int)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type B: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">B</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: const int)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type C: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">C</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: int*)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -15902,7 +15866,6 @@ input parameter lists, e.g.,</p>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type E: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">E</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: int*)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type F: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">F</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: int**)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Type G: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">G</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (expected: int(*)(int))&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="c1">//}</span>
 </pre></div>
 
      </div>
@@ -15949,23 +15912,23 @@ Type G: PFiiE (expected: int(*)(int))
 
 </div>
 
-</div></div></section><section >
+</div></section><section >
 <div id="cell-id=30ccb64c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Types-Traits"><center>Intermezzo: Types Traits</center><a class="anchor-link" href="#Intermezzo:-Types-Traits">&#182;</a></h2><p>C++ provides type traits that <strong>operate on the type</strong></p>
-<div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="c1">// int (unchanged)</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c1">// int</span>
+<p>C++ provides type traits that <strong>operate on the type</strong></p>
+<div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="w">      </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">    </span><span class="c1">// int (unchanged)</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w">    </span><span class="c1">// int</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="c1">//int</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">;</span><span class="w"> </span><span class="c1">//int</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">;</span><span class="w"> </span><span class="c1">//int*</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">;</span><span class="w"> </span><span class="c1">//const int</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w"> </span><span class="c1">//const int</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span><span class="c1">//int</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">;</span><span class="w">      </span><span class="c1">// int</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">;</span><span class="w">      </span><span class="c1">// int</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">;</span><span class="w">      </span><span class="c1">// int*</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">;</span><span class="w"> </span><span class="c1">// const int</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w"> </span><span class="c1">// const int</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span><span class="c1">// int</span>
 </pre></div>
 
 </div>
@@ -15978,14 +15941,14 @@ Type G: PFiiE (expected: int(*)(int))
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Types-Traits"><center>Intermezzo: Types Traits</center><a class="anchor-link" href="#Intermezzo:-Types-Traits">&#182;</a></h2><p>C++ provides type traits that <strong>operate on two types:</strong>
-Check if two types are <strong>exactly</strong> the same (including qualifiers)</p>
+<p>C++ provides type traits that <strong>operate on two types</strong></p>
+<p>Check if two types are <strong>exactly</strong> the same (including qualifiers)</p>
 <div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;::</span><span class="n">value</span>
 
-<span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// true</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w">       </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// true</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// false</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">remove_const</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span>
-<span class="w">               </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// true</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">remove_const</span><span class="o">&lt;</span><span class="w">      </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">             </span><span class="n">remove_const</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="c1">// true</span>
 </pre></div>
 
 </div>
@@ -15998,13 +15961,13 @@ Check if two types are <strong>exactly</strong> the same (including qualifiers)<
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Type-Traits"><center>Intermezzo: Type Traits</center><a class="anchor-link" href="#Intermezzo:-Type-Traits">&#182;</a></h2><p>C++ provides type traits that <strong>operate on two types:</strong></p>
+<p>C++ provides type traits that <strong>operate on two types</strong></p>
 <p>Check if type B is derived from type A</p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=0328f4f4" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=0328f4f4" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16018,14 +15981,12 @@ Check if two types are <strong>exactly</strong> the same (including qualifiers)<
 <span class="k">struct</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="p">{};</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{};</span>
 
-<span class="c1">//int main() {</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"> </span><span class="c1">// Print &#39;true&#39; or &#39;false&#39; for bool values</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;A, B&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;A, A&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;B, A&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;B, B&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
-<span class="c1">//    return 0;</span>
-<span class="c1">//}</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"> </span><span class="c1">// Print &#39;true&#39; or &#39;false&#39; for bool values</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;A, B&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;A, A&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;B, A&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is_base_of&lt;B, B&gt;::value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
 </pre></div>
 
      </div>
@@ -16069,14 +16030,14 @@ is_base_of&lt;B, B&gt;::value: true
 
 </div>
 
-</div></div></section><section >
+</div></section><section >
 <div id="cell-id=b821d37a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Type-Traits"><center>Intermezzo: Type Traits</center><a class="anchor-link" href="#Intermezzo:-Type-Traits">&#182;</a></h2><p>C++ provides type trait to <strong>enable types conditionally</strong></p>
+<p>C++ provides type trait to <strong>enable types conditionally</strong></p>
 <p>If <code>is_odd</code> is called with an <strong>integral type</strong> (e.g., <code>int</code>) the compiler
 expands the following templated function as follows</p>
 <div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_odd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kt">bool</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
@@ -16086,16 +16047,15 @@ expands the following templated function as follows</p>
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=a07ea5df" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=a07ea5df" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span><span class="c1">//Jupyter notebook interpreter cannot handle template</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<div class=" highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span>
 
 <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
@@ -16104,11 +16064,9 @@ expands the following templated function as follows</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kt">bool</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i is odd: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_odd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i is odd: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_odd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -16116,53 +16074,16 @@ expands the following templated function as follows</p>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>input_line_61:3:1: error: expected expression
-template&lt;typename T&gt;
-^
-input_line_61:10:25: error: use of undeclared identifier &#39;is_odd&#39;
-cout &lt;&lt; &#34;i is odd: &#34; &lt;&lt; is_odd(2) &lt;&lt; std::endl;
-                        ^
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Interpreter Error: </pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></div></section><section >
+</div></section><section >
 <div id="cell-id=211c8f0f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Intermezzo:-Type-Traits"><center>Intermezzo: Type Traits</center><a class="anchor-link" href="#Intermezzo:-Type-Traits">&#182;</a></h2><p>C++ provides type trait to <strong>enable types conditionally</strong></p>
+<p>C++ provides type trait to <strong>enable types conditionally</strong></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_integral</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                          </span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_integral</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">type</span>
 <span class="n">is_odd</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kt">bool</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="kt">float</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i is odd :&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">is_odd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
@@ -16201,7 +16122,7 @@ Interpreter Error: </pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-revisited"><center>SFINAE revisited</center><a class="anchor-link" href="#SFINAE-revisited">&#182;</a></h2><p>Consider the <code>info()</code> member function</p>
+<p>Consider the <code>info()</code> member function</p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span><span class="w"> </span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
@@ -16216,29 +16137,7 @@ no return type (=invalid code) if I is of any other type</p>
 </div>
 </div>
 </div>
-</div></section><section >
-<div id="cell-id=067c4834" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-revisited"><center>SFINAE revisited</center><a class="anchor-link" href="#SFINAE-revisited">&#182;</a></h2><p>First attempt of partially specialized <code>info()</code> member function</p>
-<div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// partial specialization for I=int</span>
-<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
-<span class="w">    </span><span class="c1">// partial specialization for I!=int</span>
-<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
-<span class="p">};</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-</div></section><section >
+</div></section></section><section ><section >
 <div id="cell-id=f60bae8f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16268,17 +16167,15 @@ no return type (=invalid code) if I is of any other type</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-revisited"><center>SFINAE revisited</center><a class="anchor-link" href="#SFINAE-revisited">&#182;</a></h2><p>Partially specialized <code>info()</code> member function (now working!)</p>
+<p>Partially specialized <code>info()</code> member function (now working!)</p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">J</span><span class="o">=</span><span class="n">I</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                                            </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
 
 <span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">J</span><span class="o">=</span><span class="n">I</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                                              </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
 <span class="p">};</span>
 </pre></div>
@@ -16293,7 +16190,7 @@ no return type (=invalid code) if I is of any other type</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-revisited"><center>SFINAE revisited</center><a class="anchor-link" href="#SFINAE-revisited">&#182;</a></h2><p>In words...</p>
+<p>In words...</p>
 <ul>
 <li>Introduce an <strong>extra function template parameter</strong> <code>J</code> that, by</li>
 </ul>
@@ -16303,33 +16200,31 @@ no return type (=invalid code) if I is of any other type</p>
 <ul>
 <li>Make type traits depend on extra template parameter <code>J</code></li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                                            </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
+<div class="highlight"><pre><span></span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
 </pre></div>
 <ul>
 <li>Make sure that exactly one member function leads to valid code</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                                        </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
+<div class="highlight"><pre><span></span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">type</span>
 </pre></div>
 
 </div>
 </div>
 </div>
-</div></section><section >
+</div></section></section><section ><section >
 <div id="cell-id=1aff9496" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-revisited"><center>SFINAE revisited</center><a class="anchor-link" href="#SFINAE-revisited">&#182;</a></h2><p>Let us reconsider the dot-product for complex-valued vectors</p>
+<h2 id="Dot-product-revisited"><center>Dot product revisited</center><a class="anchor-link" href="#Dot-product-revisited">&#182;</a></h2><p>Let us reconsider the dot product for complex-valued vectors</p>
 <p>Use <strong>SFINAE paradigm</strong> to realise alternative implementations
 of the dot product for real- and complex-valued types</p>
 <p>Strategy:</p>
 <ul>
 <li>Write <strong>type trait</strong> <code>is_complex&lt;T&gt;</code> that has <code>value=true</code>if <code>T</code> is of type <code>std::complex&lt;U&gt;</code> and <code>value=false</code> otherwise</li>
-<li>Use <strong>type trait</strong> <code>std::enable_if&lt;...&gt;</code> to distinguish between real- valued and complex-valued implementation of the dot-product</li>
+<li>Use <strong>type trait</strong> <code>std::enable_if&lt;...&gt;</code> to distinguish between real- and complex-valued implementation of the dot product</li>
 </ul>
 
 </div>
@@ -16367,7 +16262,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Type-trait-is_complex"><center>Type trait <code>is_complex</code></center><a class="anchor-link" href="#Type-trait-is_complex">&#182;</a></h2><p>C++ standard way to implement type traits is by deriving
+<p>C++ standard way to implement type traits is by deriving
 <code>is_complex</code> from structure <code>std::integral_constant&lt;T, value&gt;</code></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">is_complex</span>
@@ -16375,7 +16270,7 @@ our purpose but is not really in line with standard traits)</p>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">{};</span>
 </pre></div>
-<p>Logical combination (&amp;&amp;, ||) of all <code>std::complex&lt;S&gt;</code> types that should be supported by the <code>is_complex</code> type trait</p>
+<p>Logical combination (<code>&amp;&amp;</code>, <code>||</code>) of all <code>std::complex&lt;S&gt;</code> types that should be supported by the <code>is_complex</code> type trait</p>
 
 </div>
 </div>
@@ -16387,7 +16282,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Type-trait-is_complex"><center>Type trait <code>is_complex</code></center><a class="anchor-link" href="#Type-trait-is_complex">&#182;</a></h2><p>Implementation of dot-product for <strong>complex-valued types</strong></p>
+<p>Implementation of dot product for <strong>complex-valued types</strong></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Vector</span><span class="w"> </span><span class="p">{</span>
 <span class="p">...</span>
@@ -16411,7 +16306,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Type-trait-is_complex"><center>Type trait <code>is_complex</code></center><a class="anchor-link" href="#Type-trait-is_complex">&#182;</a></h2><p>Implementation of dot-product for <strong>real-valued types</strong></p>
+<p>Implementation of dot-product for <strong>real-valued types</strong></p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Vector</span><span class="w"> </span><span class="p">{</span>
 <span class="p">...</span>
@@ -16440,7 +16335,6 @@ our purpose but is not really in line with standard traits)</p>
 <ul>
 <li>Use <code>std::enable_if</code> and <code>std::is_xyz</code> or self-written type trait to switch between different implementations of a function</li>
 </ul>
-<p>Code gets less readable due to dummy function template <code>L</code></p>
 <p>Default template arguments for function templates
 (<code>template&lt;typename J=I&gt;</code>)are a new feature in C++11</p>
 <p>For a complete list of standard type traits look at: <a href="http://www.cplusplus.com/reference/type_traits/">http://www.cplusplus.com/reference/type_traits/</a></p>
@@ -16456,44 +16350,16 @@ our purpose but is not really in line with standard traits)</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="SFINAE-Quiz"><center>SFINAE Quiz</center><a class="anchor-link" href="#SFINAE-Quiz">&#182;</a></h2><p>What does this code do?</p>
-<table align="center">
-<tr align="center">
-<th align="center"> Good </th>
-<th align="center"> Bad </th>
-</tr>
-<tr>
-<td>
-<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">A</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">  </span><span class="p">};</span>
-<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="n">B</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">B</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">  </span><span class="p">};</span>
-<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="n">C</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">C</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">  </span><span class="p">};</span>
-</pre></div>
-</td>
-<td>
-<div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">conditional</span><span class="o">&lt;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span>
-<span class="n">get_base_type</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">conditional</span><span class="o">&lt;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">    </span><span class="n">A</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">ReturnType</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ReturnType</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="p">{};</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{};</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="p">{};</span>
 
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">typename</span><span class="w"> </span><span class="nc">auto</span><span class="w"> </span><span class="n">get_base_type</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">conditional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">ReturnType</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">ReturnType</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
-</td>
-</tr>
-</table>
 
 </div>
 </div>
@@ -16505,7 +16371,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SFINAE-Quiz"><center>SFINAE Quiz</center><a class="anchor-link" href="#SFINAE-Quiz">&#182;</a></h2><p>See the <code>get_base_type</code> function in action</p>
+<p>See the <code>get_base_type</code> function in action</p>
 <div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
 <span class="k">typeid</span><span class="p">(</span><span class="n">a</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="c1">// -&gt; 1A</span>
 <span class="k">typeid</span><span class="p">(</span><span class="n">b</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="c1">// -&gt; 1B</span>
@@ -16544,7 +16410,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Final-word-on-SFINAE"><center>Final word on SFINAE</center><a class="anchor-link" href="#Final-word-on-SFINAE">&#182;</a></h2><p>A possible implementation of the function <code>std::conj(...)</code> that uses the self-written <code>is_complex</code> type trait</p>
+<p>A possible implementation of the function <code>std::conj(...)</code> that uses the self-written <code>is_complex</code> type trait</p>
 <div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_complex</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">conj</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
 <span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">real</span><span class="p">(),</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="p">.</span><span class="n">imag</span><span class="p">());</span><span class="w"> </span><span class="p">}</span>
@@ -16557,39 +16423,7 @@ our purpose but is not really in line with standard traits)</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=fc5cdbb4" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div id="cell-id=3cbf6b22" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-c++"><pre><span></span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div id="cell-id=b7bddbfd" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=0becc51d-ebe7-4a35-9da4-073f1840038d" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
