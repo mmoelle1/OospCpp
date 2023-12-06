@@ -48,10 +48,10 @@ https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhtt
 [binder-jupyternb-lecture7]:
 https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture7.ipynb%26branch%3D2023
 
-[pages-lecture1]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture1.slides.html
-[pages-lecture2]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture2.slides.html
-[pages-lecture3]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture3.slides.html
-[pages-lecture4]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture4.slides.html
-[pages-lecture5]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture5.slides.html
-[pages-lecture6]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture6.slides.html
-[pages-lecture7]: https://Crazy-Rich-Meghan.github.io/OospCpp/notebooks/static/lecture7.slides.html
+[pages-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html
+[pages-lecture2]: https://mmoelle1.github.io/OospCpp/_static/lecture2.slides.html
+[pages-lecture3]: https://mmoelle1.github.io/OospCpp/_static/lecture3.slides.html
+[pages-lecture4]: https://mmoelle1.github.io/OospCpp/_static/lecture4.slides.html
+[pages-lecture5]: https://mmoelle1.github.io/OospCpp/_static/lecture5.slides.html
+[pages-lecture6]: https://mmoelle1.github.io/OospCpp/_static/lecture6.slides.html
+[pages-lecture7]: https://mmoelle1.github.io/OospCpp/_static/lecture7.slides.html
