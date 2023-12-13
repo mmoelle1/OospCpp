@@ -15,8 +15,8 @@ We strongly recomment using the notebooks and slides in the provided binder envi
 | 2 | [![Lecture 2][badge-binder-lecture]][binder-jupyterlab-lecture2] | [![Lecture 2][badge-binder-lecture]][binder-jupyternb-lecture2] | [![Lecture 2][badge-pages-lecture]][pages-lecture2] |
 | 3 | [![Lecture 3][badge-binder-lecture]][binder-jupyterlab-lecture3] | [![Lecture 3][badge-binder-lecture]][binder-jupyternb-lecture3] | [![Lecture 3][badge-pages-lecture]][pages-lecture3] |
 | 4 | [![Lecture 4][badge-binder-lecture]][binder-jupyterlab-lecture4] | [![Lecture 4][badge-binder-lecture]][binder-jupyternb-lecture4] | [![Lecture 4][badge-pages-lecture]][pages-lecture4] |
-<!---
 | 5 | [![Lecture 5][badge-binder-lecture]][binder-jupyterlab-lecture5] | [![Lecture 5][badge-binder-lecture]][binder-jupyternb-lecture5] | [![Lecture 5][badge-pages-lecture]][pages-lecture5] |
+<!---
 | 6 | [![Lecture 6][badge-binder-lecture]][binder-jupyterlab-lecture6] | [![Lecture 6][badge-binder-lecture]][binder-jupyternb-lecture6] | [![Lecture 6][badge-pages-lecture]][pages-lecture6] |
 | 7 | [![Lecture 7][badge-binder-lecture]][binder-jupyterlab-lecture7] | [![Lecture 7][badge-binder-lecture]][binder-jupyternb-lecture7] | [![Lecture 7][badge-pages-lecture]][pages-lecture7] |
 --->
