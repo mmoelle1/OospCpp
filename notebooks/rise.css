@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&amp;lang=en');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&amp;lang=en');
+
 .rise-enabled {
     background-color: #f7f7f7 !important;
     border-top: 30px #00A6D6 solid;
@@ -16,6 +19,20 @@
 
 .rendered_html h1 {
     color: #00A6D6;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+.rendered_html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 80%;
+}
+
+.rendered_html code {
+    font-weight: 100;
+    font-size: 80%;
 }
 
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
