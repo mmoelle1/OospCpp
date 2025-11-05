@@ -22,7 +22,7 @@ jobs:
 
     - name: create slides 
       run: |
-        jupyter nbconvert --to slides --embed-images --template reveal --output-dir docs/source/_static "notebooks/*.ipynb"
+        jupyter nbconvert --to slides --embed-images --template custom_reveal --TemplateExporter.extra_template_basedirs=./docs/ --output-dir docs/source/_static "notebooks/*.ipynb"
     
     - name: Convert notebooks to PDF
       run: |
