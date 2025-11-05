@@ -18,22 +18,17 @@ jobs:
     - name: install dependencies
       run: |
         pip install -r ./docs/requirements.txt
-        sudo apt-get install -y wkhtmltopdf
 
     - name: create slides 
       run: |
         jupyter nbconvert --to slides --embed-images --template custom_reveal --TemplateExporter.extra_template_basedirs=./docs/ --output-dir docs/source/_static "notebooks/*.ipynb"
-    
-    - name: Convert notebooks to PDF
-      run: |
-        for html_file in docs/source/_static/*.html; do
-            # Create the PDF file name from the HTML file name
-            pdf_file="${html_file%.html}.pdf"
-            
-            # Convert HTML to PDF using wkhtmltopdf (or replace with google-chrome for headless conversion)
-            wkhtmltopdf --orientation landscape "$html_file" "$pdf_file"
-            
-          done
+
+    - name: convert slides to pdf
+      uses: fifsky/html-to-pdf-action@master
+      with:
+        htmlFile: ./docs/source/_static/lecture1.slides.html
+        outputFile: ./docs/source/_static/lecture1.slides.pdf
+        pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
     - name: convert md to rst # md reference is not recognized with md_include
       uses: docker://pandoc/core:latest
