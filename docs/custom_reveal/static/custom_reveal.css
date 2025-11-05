@@ -17,6 +17,16 @@
 .reveal table {
   font-size: var(--jp-ui-font-size1);
 }
+.reveal code {
+  color: #00A6D6 !important;    
+  font-family: 'Source Code Pro', monospace !important;
+  font-size: 100% !important;
+  font-weight: 400 !important;
+  background: transparent !important;
+}
+.reveal strong {
+  font-weight: 400 !important;
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
