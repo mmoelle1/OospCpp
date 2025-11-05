@@ -28,7 +28,7 @@ jobs:
       with:
         htmlFile: ./docs/source/_static/lecture1.slides.html
         outputFile: ./docs/source/_static/lecture1.slides.pdf
-        pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+        pdfOptions: '{"format": "A4", "landscape": "true", "printBackground": "true", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
     - name: convert md to rst # md reference is not recognized with md_include
       uses: docker://pandoc/core:latest
