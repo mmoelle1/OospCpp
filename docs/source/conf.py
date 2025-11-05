@@ -8,9 +8,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "OospCpp"
-copyright = "2023, Matthias Möller"
+copyright = "2023-2025, Matthias Möller"
 author = "Matthias Möller"
-release = "2023"
+release = "2025"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
