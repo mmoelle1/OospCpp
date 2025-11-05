@@ -46,7 +46,7 @@ jobs:
 
     - name: deploy docs only if it is pushed to main
       uses: peaceiris/actions-gh-pages@v3
-      # publish every time there's a push to the 2024 branch
+      # publish every time there's a push to the default branch
       if: ${{ github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
