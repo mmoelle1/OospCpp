@@ -32,7 +32,7 @@
   padding: 0.4em;
   margin: 0px;
   font-family: 'Source Code Pro', monospace !important;
-  font-size: 80%;
+  font-size: 100%; !important
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .reveal pre code {
@@ -62,7 +62,7 @@ div.code_cell {
 
 div.output_area pre {
   font-family: 'Source Code Pro', monospace !important;
-  font-size: 80% !important;
+  font-size: 100% !important;
 }
 
 div.jp-OutputPrompt {
