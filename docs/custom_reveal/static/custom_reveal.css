@@ -141,3 +141,9 @@ main {
 ::-webkit-scrollbar-thumb {
   background: #727272 !important;
 }
+
+/* Ensure colors and images are kept in PDF output */
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  img { visibility: visible !important; }
+}

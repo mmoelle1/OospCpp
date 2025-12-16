@@ -7,6 +7,8 @@ jobs:
   build_docs:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - uses: actions/checkout@v3
@@ -23,26 +25,83 @@ jobs:
       run: |
         jupyter nbconvert --to slides --embed-images --template custom_reveal --TemplateExporter.extra_template_basedirs=./docs/ --output-dir docs/source/_static "notebooks/*.ipynb"
 
-    - name: convert slides to pdf
-      uses: fifsky/html-to-pdf-action@master
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        htmlFile: ./docs/source/_static/lecture1.slides.html
-        outputFile: ./docs/source/_static/lecture1.slides.pdf
-        pdfOptions: '{"format": "A4", "landscape": true, "printBackground": true, "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+        node-version: '18'
 
-    - name: convert md to rst # md reference is not recognized with md_include
-      uses: docker://pandoc/core:latest
+    - name: Prepare output dir
+      run: |
+        mkdir -p docs/source/_static
+
+    - name: Install Puppeteer
+      run: |
+        npm i puppeteer@22 --no-fund --no-audit
+
+    - name: Render upstream print slides to PDFs (Puppeteer)
+      run: |
+        node --input-type=module - <<'NODE'
+        import fs from 'node:fs';
+        import puppeteer from 'puppeteer';
+
+        const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+        fs.mkdirSync('docs/source/_static', { recursive: true });
+        const browser = await puppeteer.launch({
+          headless: 'new',
+          args: ['--no-sandbox','--disable-setuid-sandbox','--force-color-profile=srgb','--disable-web-security']
+        });
+
+        try {
+          for (let i = 1; i <= 7; i++) {
+            const url = `https://mmoelle1.github.io/OospCpp/_static/lecture${i}.slides.html?print-pdf`;
+            const out = `docs/source/_static/lecture${i}.slides.pdf`;
+            const page = await browser.newPage();
+            await page.goto(url, { waitUntil: 'networkidle2', timeout: 120000 });
+            // Ensure Reveal content is present
+            await page.waitForSelector('.reveal .slides section', { timeout: 15000 }).catch(() => {});
+            // Small stabilization delay
+            await sleep(1500);
+            await page.pdf({
+              path: out,
+              landscape: true,
+              printBackground: true,
+              preferCSSPageSize: true,
+              margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' }
+            });
+            await page.close();
+            console.log('Saved', out);
+          }
+        } finally {
+          await browser.close();
+        }
+        NODE
+
+    - name: Obtain all PDFs into a zip
+      run: |
+        ls -l docs/source/_static/*.slides.pdf || true
+        zip -j docs/source/_static/OospCpp-lectures-pdf.zip docs/source/_static/lecture*.slides.pdf
+
+    # Upload printable PDFs zip as a GitHub Release asset (no Pages, better for testing in forks)
+    - name: Upload printable PDFs release asset
+      uses: ncipollo/release-action@v1
       with:
-        args: --from=markdown --to=rst --output=docs/source/README.rst README.md
+        tag: printable-pdfs
+        name: Printable PDFs
+        allowUpdates: true
+        replacesArtifacts: true
+        artifacts: docs/source/_static/lecture*.slides.pdf,docs/source/_static/OospCpp-lectures-pdf.zip
+        token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: build docs
+    # Only upstream repo deploys Pages; forks won't publish gh-pages
+    - name: build docs (upstream main only)
+      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/main' }}
       run: |
         sphinx-build -W -b html docs/source docs/build -j auto
 
-    - name: deploy docs only if it is pushed to main
+    - name: deploy docs (upstream main only)
       uses: peaceiris/actions-gh-pages@v3
-      # publish every time there's a push to the default branch
-      if: ${{ github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/main' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/build

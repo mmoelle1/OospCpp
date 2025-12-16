@@ -51,11 +51,13 @@
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+if (window.location.search.match(/print-pdf/gi)) {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  // Reveal.js v4 print stylesheet
+  link.href = '{{ reveal_url_prefix }}/dist/print/paper.css';
+  document.getElementsByTagName('head')[0].appendChild(link);
 }
 </script>
 
@@ -91,6 +93,12 @@ a.anchor-link {
 @media print {
   body {
     margin: 0;
+  }
+  /* Preserve colors and backgrounds when printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 }
 </style>
