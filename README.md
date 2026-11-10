@@ -7,17 +7,11 @@ This repository contains the slides of the course _Object-oriented scientific pr
 
 We strongly recomment using the notebooks and slides in the provided binder environment. Slides and notebooks **will not run** on a local JupyterLab installation because they require the [Jupyter kernel for C++](https://github.com/jupyter-xeus/xeus-cling) to be installed and configured properly. Note that **no support will be given** to make the slides and notebooks run on a local JupyterLab installation.
 
-## Lectures
+# Lecture 1 - November 11, 2026
 
-| lecture no. | notebooks | interactive slides | static slides |
-| :---------: | :-------: | :----------------: | :-----------: |
-| 1 | [![Lecture 1][badge-binder-lecture]][binder-jupyterlab-lecture1] | [![Lecture 1][badge-binder-lecture]][binder-jupyternb-lecture1] | [![Lecture 1][badge-pages-lecture]][pages-lecture1] |
-| 2 | [![Lecture 2][badge-binder-lecture]][binder-jupyterlab-lecture2] | [![Lecture 2][badge-binder-lecture]][binder-jupyternb-lecture2] | [![Lecture 2][badge-pages-lecture]][pages-lecture2] |
-| 3 | [![Lecture 3][badge-binder-lecture]][binder-jupyterlab-lecture3] | [![Lecture 3][badge-binder-lecture]][binder-jupyternb-lecture3] | [![Lecture 3][badge-pages-lecture]][pages-lecture3] |
-| 4 | [![Lecture 4][badge-binder-lecture]][binder-jupyterlab-lecture4] | [![Lecture 4][badge-binder-lecture]][binder-jupyternb-lecture4] | [![Lecture 4][badge-pages-lecture]][pages-lecture4] |
-| 5 | [![Lecture 5][badge-binder-lecture]][binder-jupyterlab-lecture5] | [![Lecture 5][badge-binder-lecture]][binder-jupyternb-lecture5] | [![Lecture 5][badge-pages-lecture]][pages-lecture5] |
-| 6 | [![Lecture 6][badge-binder-lecture]][binder-jupyterlab-lecture6] | [![Lecture 6][badge-binder-lecture]][binder-jupyternb-lecture6] | [![Lecture 6][badge-pages-lecture]][pages-lecture6] |
-| 7 | [![Lecture 7][badge-binder-lecture]][binder-jupyterlab-lecture7] | [![Lecture 7][badge-binder-lecture]][binder-jupyternb-lecture7] | [![Lecture 7][badge-pages-lecture]][pages-lecture7] |
+| notebook | interactive slides | static slides |
+| :------: | :----------------: | :-----------: |
+| [![Lecture 1][badge-binder-lecture]][binder-jupyterlab-lecture1] | [![Lecture 1][badge-binder-lecture]][binder-jupyternb-lecture1] | [![Lecture 1][badge-pages-lecture]][pages-lecture1] |
 
 [Download all printable PDFs (Releases)](https://github.com/mmoelle1/OospCpp/releases)
 
@@ -25,43 +19,15 @@ We strongly recomment using the notebooks and slides in the provided binder envi
 
 [badge-pages-lecture]: https://img.shields.io/badge/static-lecture-579ACA.svg?style=flat-square
 
-[binder-jupyterlab-lecture1]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture2]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture2.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture3]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture3.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture4]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture4.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture5]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture5.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture6]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture6.ipynb%26branch%3D2025
-[binder-jupyterlab-lecture7]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture7.ipynb%26branch%3D2025
+[binder-jupyterlab-lecture1]: https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dlab%252Ftree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2026
 
 [binder-jupyternb-lecture1]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2025
-[binder-jupyternb-lecture2]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture2.ipynb%26branch%3D2025
-[binder-jupyternb-lecture3]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture3.ipynb%26branch%3D2025
-[binder-jupyternb-lecture4]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture4.ipynb%26branch%3D2025
-[binder-jupyternb-lecture5]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture5.ipynb%26branch%3D2025
-[binder-jupyternb-lecture6]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture6.ipynb%26branch%3D2025
-[binder-jupyternb-lecture7]:
-https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture7.ipynb%26branch%3D2025
+https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmmoelle1%252FOospCpp%26urlpath%3Dtree%252FOospCpp%252Fnotebooks%252Flecture1.ipynb%26branch%3D2026
 
 [pages-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html
-[pages-lecture2]: https://mmoelle1.github.io/OospCpp/_static/lecture2.slides.html
-[pages-lecture3]: https://mmoelle1.github.io/OospCpp/_static/lecture3.slides.html
-[pages-lecture4]: https://mmoelle1.github.io/OospCpp/_static/lecture4.slides.html
-[pages-lecture5]: https://mmoelle1.github.io/OospCpp/_static/lecture5.slides.html
-[pages-lecture6]: https://mmoelle1.github.io/OospCpp/_static/lecture6.slides.html
-[pages-lecture7]: https://mmoelle1.github.io/OospCpp/_static/lecture7.slides.html
+
 
 [badge-pdf-lecture]: https://img.shields.io/badge/printable-pdf-blue?style=flat-square
 [pdf-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html?print-pdf
-[pdf-lecture2]: https://mmoelle1.github.io/OospCpp/_static/lecture2.slides.html?print-pdf
-[pdf-lecture3]: https://mmoelle1.github.io/OospCpp/_static/lecture3.slides.html?print-pdf
-[pdf-lecture4]: https://mmoelle1.github.io/OospCpp/_static/lecture4.slides.html?print-pdf
-[pdf-lecture5]: https://mmoelle1.github.io/OospCpp/_static/lecture5.slides.html?print-pdf
-[pdf-lecture6]: https://mmoelle1.github.io/OospCpp/_static/lecture6.slides.html?print-pdf
-[pdf-lecture7]: https://mmoelle1.github.io/OospCpp/_static/lecture7.slides.html?print-pdf
-&copy; Copyright 2025, Matthias Möller.
+
+&copy; Copyright 2026, Matthias Möller.
