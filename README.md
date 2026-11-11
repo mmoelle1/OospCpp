@@ -34,10 +34,10 @@ https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhtt
 
 [pdf-lecture1]: https://mmoelle1.github.io/OospCpp/_static/lecture1.slides.html?print-pdf
 
-[reader1]: https://mmoelle1.github.io/OospCpp/readers/Reader_week1.pdf
+[reader1]: https://github.com/mmoelle1/OospCpp/readers/Reader_week1.pdf
 
-[primer1]: https://mmoelle1.github.io/OospCpp/primers/Primer_week1.md
+[primer1]: https://github.com/mmoelle1/OospCpp/primers/Primer_week1.md
 
-[prompts1]: https://mmoelle1.github.io/OospCpp/prompts/Prompts_week1.md
+[prompts1]: https://github.com/mmoelle1/OospCpp/prompts/Prompts_week1.md
 
 &copy; Copyright 2026, Matthias Möller.
