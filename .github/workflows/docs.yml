@@ -1,7 +1,9 @@
 name: docs
 
 on:
-  push
+  push:
+    branches: ["2026"]
+  workflow_dispatch:
 
 jobs:
   build_docs:
@@ -93,15 +95,24 @@ jobs:
         artifacts: docs/source/_static/lecture*.slides.pdf,docs/source/_static/OospCpp-lectures-pdf.zip
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: copy course materials
+      run: |
+        cp -R primers prompts docs/source/
+        
     # Only upstream repo deploys Pages; forks won't publish gh-pages
     - name: build docs (upstream main only)
-      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/main' }}
+      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/2026' }}
       run: |
         sphinx-build -W -b html docs/source docs/build -j auto
 
-    - name: deploy docs (upstream main only)
+    - name: copy downloadable course materials
+      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/2026' }}
+      run: |
+        cp -R reader primers prompts docs/build/
+        
+    - name: deploy docs
       uses: peaceiris/actions-gh-pages@v3
-      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/main' }}
+      if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/2026' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/build

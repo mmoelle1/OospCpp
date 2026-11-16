@@ -8,9 +8,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "OospCpp"
-copyright = "2023-2025, Matthias Möller"
+copyright = "2023-2026, Matthias Möller"
 author = "Matthias Möller"
-release = "2025"
+release = "2026"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -21,8 +21,7 @@ source_suffix = {
     ".md": "markdown",
 }
 
-extensions = [
-]
+extensions = ["myst_parser"]
 
 
 templates_path = ["_templates"]
@@ -34,6 +33,6 @@ pygments_style = "sphinx"
 # -- Options for HTML output -------------------------------------------------
 
 html_theme = "pydata_sphinx_theme"
-html_title  = "OospCpp"
+html_title  = "Object-oriented scientific programming with C++"
 html_static_path = ["_static"]
 
