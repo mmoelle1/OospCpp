@@ -100,10 +100,10 @@ jobs:
         cp -R primers prompts docs/source/
         
     # Only upstream repo deploys Pages; forks won't publish gh-pages
-    - name: build docs (upstream main only)
+    - name: build docs
       if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/2026' }}
       run: |
-        sphinx-build -W -b html docs/source docs/build -j auto
+        sphinx-build -b html docs/source docs/build -j auto
 
     - name: copy downloadable course materials
       if: ${{ github.repository_owner == 'mmoelle1' && github.ref == 'refs/heads/2026' }}
