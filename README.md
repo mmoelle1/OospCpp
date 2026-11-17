@@ -1,11 +1,21 @@
 # Object-oriented scientific programming with C++
 
-This repository contains the slides of the course _Object-oriented scientific programming with C++_ given at TU Delft under the two course codes TW3720TW (bachelor programme) and WI4771TU (master programme). The slides are offered in three different variants: 
--  `notebooks` are jupyterlab notebooks meant for studying the material before or after the lecture
--  `interactive slides` will be used during the lecture with the option to adjust the content interactively
--  `static slides` are static versions of the lecture slides
+This repository contains the slides and supporting materials for the course *Object-oriented scientific programming with C++*, taught at TU Delft under two course codes: TW3720TW (bachelor’s programme) and WI4771TU (master’s programme).
 
-We strongly recomment using the notebooks and slides in the provided binder environment. Slides and notebooks **will not run** on a local JupyterLab installation because they require the [Jupyter kernel for C++](https://github.com/jupyter-xeus/xeus-cling) to be installed and configured properly. Note that **no support will be given** to make the slides and notebooks run on a local JupyterLab installation.
+The lecture materials are available in three formats:
+
+- `notebooks`: JupyterLab notebooks for studying the material before or after each lecture.
+- `interactive slides`: slides used during lectures, with the option to modify and run code interactively.
+- `static slides`: static versions of the lecture slides.
+
+We strongly recommend using the notebooks and interactive slides in the provided Binder environment. Running them locally requires a properly installed and configured [C++ kernel for Jupyter](https://github.com/jupyter-xeus/xeus-cling). **We do not provide support for setting up or running these materials in a local JupyterLab installation.**
+
+For each week, we also provide:
+
+- `readers`: supplementary reading material for self-study.
+- `primers`: Markdown files whose contents you should use as the first prompt in a new conversation with your AI agent. These instructions guide the agent to support the week’s learning goals.
+- `prompts`: Markdown files containing the exact prompts used to generate the code examples in the reader.
+
 
 # Lecture 1 - 11 November 2026
 
@@ -69,4 +79,4 @@ https://mybinder.org/v2/gh/mmoelle1/OospCpp/binder?urlpath=git-pull%3Frepo%3Dhtt
 
 
 
-&copy; Copyright 2026, Matthias Möller.
+&copy; Copyright 2026 by Matthias Möller.
