@@ -37,6 +37,12 @@
     font-size: 100%;
 }
 
+/* Let fenced Markdown code blocks grow to show all their lines in slides. */
+.rise-enabled .reveal .rendered_html pre,
+.rise-enabled .reveal .rendered_html pre code {
+    max-height: none;
+}
+
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
     font-size: 100%;
 }
